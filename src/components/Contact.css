@@ -1,0 +1,170 @@
+.contact {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  max-width: 600px;
+  scroll-behavior: smooth;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: grey;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.6s ease;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s ease-out forwards;
+}
+.contact:hover {
+  background-color: black;
+  color: white;
+}
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  text-decoration: underline;
+  font-style: normal;
+}
+
+.contact-subtitle {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.contact-form {
+  display: flex;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #000;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+
+.contact-form button {
+  background: #000;
+  color: #fff;
+  padding: 14px;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+.contact-form button:active {
+  transform: scale(0.98);
+}
+@media (max-width: 768px) {
+  .contact {
+    max-width: 90%; /* Shrinks form width */
+    padding: 20px;
+    margin: 40px auto;
+  }
+
+  .contact-title {
+    font-size: 22px;
+  }
+
+  .contact-subtitle {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 12px;
+  }
+
+  .contact-title {
+    font-size: 20px;
+  }
+
+  .contact-subtitle {
+    font-size: 13px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

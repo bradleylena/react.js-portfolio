@@ -1,0 +1,81 @@
+.projects {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  /* 👇 animation setup */
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 1s ease-out forwards;
+}
+
+/* Slide-up effect */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectsh1 {
+  text-align: center;
+  text-decoration: underline;
+  padding: 2px;
+}
+
+.projectlinks li {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.projectlinks li a {
+  background-color: grey;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+/* Hover effect */
+.projectlinks li a:hover {
+  background-color: black;
+  transform: translateY(-4px); /* 👈 little lift effect */
+}
+@media (max-width: 768px) {
+  .projectlinks li {
+    display: block; /* stack links */
+    margin: 10px auto;
+  }
+
+  .projectlinks li a {
+    display: block;
+    font-size: 15px;
+    padding: 12px;
+    width: 80%; /* links take most of screen */
+    margin: auto;
+  }
+
+  .projectsh1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectlinks li a {
+    font-size: 14px;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .projectsh1 {
+    font-size: 18px;
+  }
+}

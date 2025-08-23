@@ -1,24 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 
-function Navbar() {
+function Navbar({ setActiveTab }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const go = (tab) => {
+    setActiveTab(tab);
+    setIsOpen(false);
+  };
+
   return (
     <div className="navbar">
-      <h1>Bradley Lenaiyarra</h1>
-      <div className="navlinks">
+      <h1 className="logo">Bradley Lenaiyarra</h1>
+
+      {/* Hamburger */}
+      <button
+        className={`hamburger ${isOpen ? "open" : ""}`}
+        aria-label="Toggle menu"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen((v) => !v)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* Links */}
+      <div className={`navlinks ${isOpen ? "active" : ""}`}>
         <nav>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="#" onClick={() => go("home")}>
+                Home
+              </a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="#" onClick={() => go("projects")}>
+                Projects & Blog
+              </a>
             </li>
             <li>
-              <a href="#">Tech-Stack</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
+              <a href="#" onClick={() => go("contact")}>
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
