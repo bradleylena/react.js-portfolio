@@ -82,6 +82,7 @@
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    margin-right: 50px;
   }
 
   .navlinks {
